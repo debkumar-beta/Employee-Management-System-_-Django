@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block body %}
+<h1>Remove an Employee!</h1>
+
+<div class="dropdown" >
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Choose an Employee to Delete
+    </button>
+    <ul class="dropdown-menu">
+      {% for emp in emps %}
+        <li><a class="dropdown-item" href="/remove_employee/{{emp.id}}">{{emp.first_name}} {{emp.last_name}} {{emp.phone}} </a></li>
+      {% endfor %}
+    </ul>
+</div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+{% endblock body %}

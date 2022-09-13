@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% block body %}
+<h1>Add Employee</h1>
+<form action="/add_employee" method="post">
+    {% csrf_token %}
+    <div class="form-group" >
+      <label for="exampleInputEmail1">First Name</label>
+      <input type="text" name="first_name" id="first_name" placeholder="first name" value="{{first_name}}">
+      <label for="exampleInputEmail1">Last Name</label>
+      <input type="text" name="last_name" id="last_name" placeholder="Last Name" value="{{last_name}}">
+      <label for="exampleInputEmail1"> Department</label>
+      <input type="number" id="dept"  placeholder="Department" name="dept"  value="{{ dept }}">
+      <label for="exampleInputEmail1">Role</label>
+      <input type="number" name="role" id="role"  placeholder="Role" value="{{ role }}">
+     
+      <label for="exampleInputEmail1">Salary</label>
+      <input type="number" name="salary" id="salary"  placeholder="Salary" value="{{ salary }}">
+      <label for="exampleInputEmail1">Bonus</label>
+      <input type="number" name="bonus" id="bonus"  placeholder="Bonus"value="{{ bonus }}">
+      <label for="exampleInputEmail1">Phone</label>
+      <input type="number" name="phone" id="phone"  placeholder="Phone" value="{{ phone }}">
+      
+
+
+      
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock body %}

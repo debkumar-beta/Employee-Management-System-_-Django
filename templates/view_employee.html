@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block body %}
+<h1>All Employee Details</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Department</th>
+        <th scope="col" >Location</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Bonus</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Hire Date</th>
+        
+
+    </tr>
+    </thead>
+
+        {% for emp in emps %}
+    <tbody>
+        <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.first_name}}</td>
+        <td> {{emp.last_name}} </td>
+        <td> {{emp.role.name}} </td>
+        <td> {{emp.dept.name}} </td>
+        <td> {{emp.dept.location}} </td>
+        <td> {{emp.salary}} </td>
+        <td> {{emp.bonus}} </td>
+        <td> {{emp.phone}} </td>
+        <td> {{emp.hire_date}} </td>
+      </tr>
+    </tbody>
+        {% endfor %}
+
+  </table>
+{% endblock body %}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}
+      
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Office Management System</title>
+    {% endblock title %}
+  </head>
+  <body>
+    <div class="container">
+        <h1>Office Management System</h1>
+        <hr>
+        
+        <a class="btn btn-outline-primary" href="/view_employee" role="button">View All Employee</a>
+        <a class="btn btn-outline-primary" href="/add_employee" role="button">Add an Employee</a>
+        <a class="btn btn-outline-primary" href="/remove_employee" role="button">Remove an Employee</a>
+        <a class="btn btn-outline-primary" href="/filter_employee" role="button">Filter Employee</a>
+        
+        {% block body %} 
+        {% endblock body %}
+    </div>
+  </body>
+</html>
